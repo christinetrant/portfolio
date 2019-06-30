@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Christine Trant | Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- META DATA -->
+<meta name="description" content="Christine Trant portfolio website, web designer and graphic designer" />
+<meta name="keywords" content="portfolio, web design, graphic design, websites, web development, front-end development, front-end web development, web developer, digital design" />
+<meta name="author" content="Christine Trant">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+<!-- STYLESHEET -->
+<link rel="stylesheet" type="text/css" href="style-2.css">
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Spirax&display=swap" rel="stylesheet">
+<!-- CSS ANIMATION EFFECTS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+<body>
+<!-------------------------->
+<!--- SCROLL TO TOP BUTTON --->
+<!-------------------------->
+<button onclick="topFunction()" id="scrollTopBtn">
+  <i class="fa fa-chevron-circle-up fa-3x"></i>
+  <span class="scrollTooltip">Scroll to Top</span>
+</button>
+
+
+<!----------------------->
+<!--- NAME & NAV BAR? --->
+<!----------------------->
+<header class="animated pulse">
+  <span class="title">Christine Trant</span>
+</header>
+
+
+<!-------------------->
+<!--- INTRODUCTION --->
+<!-------------------->
+<header class="section-1">
+  <h2>"Everything stinks till it's finished." ~ Dr. Seuss</h2>
+</header>
+<div class="slanted slanted-1"></div>
+
+<section> 
+  <article>
+    <p><i class="fas fa-user"></i>I'm Christine and I am an aspiring front-end developer.</p>
+
+    <p><i class="fas fa-envelope"></i><a class="page-scroll" href="#contact">christinetrant@gmail.com</a></p>
+
+    <p><i class="fas fa-pencil-alt"></i>I'm a London-Irish girl based in London, UK.</p>
+
+    <p class="padLeft">I love books <class="skills">&#x1F4D9;</class="skills">, adore coffee <class="skills">&#x2615;</class="skills"> &amp; have a passion for anything creative <class="skills">&#x1F3A8;</class="skills">. I am a Pinterest addict &amp; a gadget junkie.</p>
+  </article>
+</section>
+
+<!------------------------->
+<!--- ABOUT ME / RESUME --->
+<!------------------------->
+<header class="section-2">
+  <h2>About Me / My Resume</h2>
+</header>
+<div class="slanted slanted-2"></div>
+
+<section class="skills">
+  <article>
+    <ul>
+      <li><h3>Development</h3></li>
+      <li>HTML / HTML5</li>
+      <li>CSS / CSS3</li>
+      <li>Javascript</li>
+      <li>Bootstrap</li>
+      <!-- <li>WordPress &amp; Concrete5</li> -->
+    </ul>
+  </article>
+  <article>
+    <ul>
+      <li><h3>Design</h3></li>
+      <li>Illustrator</li>
+      <li>Dreamweaver / Sublime Text</li>
+      <li>Photoshop</li>
+      <li>Fireworks / InDesign</li>
+      <li>Git</li>
+    </ul>
+  </article>
+  
+</section>
+<section class="skills">
+    <a href="files/Christine_Trant_CV_2019.pdf" target="_blank" class="about-btn"><span class="icon cv" data-hover="My Resume">My Resume</span></a>
+</section>
+
+<!----------------->
+<!--- PORTFOLIO --->
+<!----------------->
+<header class="section-3">
+  <h2>Portfolio</h2>
+</header>
+<div class="slanted slanted-3"></div>
+
+<div id="gallery-filter">
+  <!-- BUTTON EVENT LISTENERS -->
+  <a id="filter-all" class="filter-btn active"><span data-hover="Show all">Show all</span></a>
+  <a id="filter-nature" class="filter-btn"><span data-hover="Websites">Websites</span></a>
+  <a id="filter-cars" class="filter-btn"><span data-hover="Development">Development</span></a>
+  <a id="filter-people" class="filter-btn"><span data-hover="Designs">Designs</span></a>
+
+  <!--  Error message in case javascript is disabled -->
+  <p id="gallery__filters__message">Sorry, these filters won&rsquo;t work without JavaScript enabled. You can still see all my work below!</p>
+</div>
+
+<main class="flex-grid">
+    <div class="gallery-item people">
+      <figure class="effect-milo">
+            <img src="portfolio-combined/img/1.jpg" alt="img01"/>
+            <figcaption>
+              <h2>Faithful <span>Milo</span></h2>
+              <p>Milo went to the woods. He took a fun ride and never came back.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+    </div>
+
+    <div class="gallery-item people">
+      <figure class="effect-milo">
+            <img src="portfolio-combined/img/2.jpg" alt="img02"/>
+            <figcaption>
+              <h2>Faithful <span>Milo</span></h2>
+              <p>Milo went to the woods. He took a fun ride and never came back.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+    </div>
+
+    <div class="gallery-item nature">
+      <figure class="effect-milo">
+            <img src="portfolio-combined/img/3.jpg" alt="img03"/>
+            <figcaption>
+              <h2>Faithful <span>Milo</span></h2>
+              <p>Milo went to the woods. He took a fun ride and never came back.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+    </div>
+
+    <div class="gallery-item cars">
+      <figure class="effect-milo">
+            <img src="portfolio-combined/img/4.jpg" alt="img04"/>
+            <figcaption>
+              <h2>Faithful <span>Milo</span></h2>
+              <p>Milo went to the woods. He took a fun ride and never came back.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+    </div>
+
+    <div class="gallery-item cars">
+      <figure class="effect-milo">
+            <img src="portfolio-combined/img/5.jpg" alt="img05"/>
+            <figcaption>
+              <h2>Faithful <span>Milo</span></h2>
+              <p>Milo went to the woods. He took a fun ride and never came back.</p>
+              <a href="#">View more</a>
+            </figcaption>     
+          </figure>
+    </div>
+
+</main>
+
+<!------------------>
+<!--- CONTACT ME --->
+<!------------------>
+<header class="section-4">
+  <h2>Contact</h2>
+</header>
+<div class="slanted slanted-4"></div>
+
+<section> 
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+
+<form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
+        <input placeholder="Name" type="text" name="name" required>
+        <input placeholder="Enter email" type="email" name="email" required>
+        <textarea placeholder="Your Message" type="text" name="message"></textarea>
+        <div id="success">
+          <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
+        </div>
+        <input class="button" type="submit" id="submit" value=SUBMIT>
+      </form>
+
+<!-------------->
+<!--- FOOTER --->
+<!-------------->
+<footer>
+  <p>All images &copy; Christine Trant 2019 | <a href="http://ie.linkedin.com/in/christinetrant">LinkedIn</a> | </p>
+</footer>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/f2f6c2061d.js"></script>
+</body>
+</html>

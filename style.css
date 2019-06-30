@@ -130,10 +130,12 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
 .skills {
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 .skills article { align-self: flex-start; }
 .skills .about-btn { justify-content: center; margin: 10px 0 15px 0; }
 
+.skills article:nth-child(1) { text-align: right; }
 
 /* SCROLL TO TOP BUTTON */
 #scrollTopBtn {
@@ -448,6 +450,7 @@ figure.effect-milo:hover p {
     .gallery-item {
         flex-basis : 100%;
     }
+    .skills article:nth-child(1) { text-align: left; }
 }
 
 

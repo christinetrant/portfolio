@@ -119,7 +119,7 @@ footer {
 footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1); }
 
 /* FONT AWESOME */
-.fa-user, .fa-envelope, .fa-pencil-alt { padding-right: 10px; font-size: 1.5rem; }
+i { padding-right: 10px; font-size: 1.5rem; }
 .fa-user { color: #3c80a3; }
 .fa-envelope { color: #51a689; }
 .fa-pencil-alt { color: #784970; }
@@ -288,6 +288,8 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
   text-align: center;
   content: "\f15c"; }
 
+
+
 /*.about-btn span::before { content: attr(data-hover); }*/
 /* Applies the hover effect to all but 'active' class*/
 .filter-btn:hover:not(.active) span,
@@ -432,8 +434,16 @@ figure.effect-milo:hover p {
   transform: translate3d(0,0,0);
 }
 
-
-
+/************************************/
+/***     CONTACT SECTION CODE     ***/
+/************************************/
+.contact {   
+  display:flex;
+  width: 100%;
+  align-self: center; 
+}
+.contact i { color: #51a689; }
+.contact h3 { line-height: 2em;}
 
 /******************************/
 /***     MEDIA QUERIES      ***/
@@ -451,6 +461,7 @@ figure.effect-milo:hover p {
         flex-basis : 100%;
     }
     .skills article:nth-child(1) { text-align: left; }
+    .contact { text-align: left; padding: 0; margin: 0; align-self: flex-start;}
 }
 
 

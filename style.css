@@ -133,7 +133,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
   align-content: center;
 }
 .skills article { align-self: flex-start; }
-.skills .about-btn { justify-content: center; margin: 10px 0 15px 0; }
+.skills .about-btn { align-self: center; margin: 10px 0 15px 0; }
 
 .skills article:nth-child(1) { text-align: right; }
 
@@ -189,10 +189,6 @@ i { padding-right: 10px; font-size: 1.5rem; }
 }
 
 
-
-* {
-  box-sizing: border-box;
-}
 
 
 /*************************************/
@@ -336,10 +332,14 @@ i { padding-right: 10px; font-size: 1.5rem; }
   backface-visibility: hidden;
 }
 
-.gallery-item figure figcaption::before,
+/*.gallery-item figure figcaption::before,
 .gallery-item figure figcaption::after {
   pointer-events: none;
-}
+}*/
+/* Makes the image beneath figcaption overlay clickable */
+/*.gallery-item figure figcaption {
+  pointer-events: none;
+}*/
 
 .gallery-item figure figcaption,
 .gallery-item figure figcaption > a {
@@ -434,6 +434,87 @@ figure.effect-milo:hover p {
   transform: translate3d(0,0,0);
 }
 
+/**************************/
+/***     MODAL CODE     ***/
+/**************************/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
 /************************************/
 /***     CONTACT SECTION CODE     ***/
 /************************************/
@@ -450,6 +531,13 @@ figure.effect-milo:hover p {
 /******************************/
 @media (max-width : 800px)
 {
+  body {
+    font-size: 1.2em;
+  }
+  .slanted-1 { border-left: 97vw solid #ce4c6e; }
+  .slanted-2 { border-right: 97vw solid #3c80a3; }
+  .slanted-3 { border-left: 97vw solid #784970; }
+  .slanted-4 { border-right: 97vw solid #51a689; }
     .gallery-item {
         flex-basis : 50%;
     }
@@ -457,6 +545,9 @@ figure.effect-milo:hover p {
 
 @media (max-width : 600px)
 {
+  body {
+    font-size: 1.1em;
+  }
     .gallery-item {
         flex-basis : 100%;
     }

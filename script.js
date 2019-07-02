@@ -108,3 +108,63 @@ document.getElementById('filter-cars').addEventListener('click', function() {
 document.getElementById('filter-people').addEventListener('click', function() {
   filterSelection("people");
 }, false);
+
+
+
+
+
+
+/**************************/
+/***     MODAL CODE     ***/
+/**************************/
+// Get the modal
+let modal = document.getElementById("myModal");
+
+
+
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let img = document.getElementsByClassName("galleryImg");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+
+
+// <div id="div1">
+//   <blah></blah>
+//   <span>This is reqd </span><blah></blah>
+//   <a href="#">Click Me </a>
+// </div>
+
+document.getElementById( 'div1' ).getElementsByTagName( 'figcaption' )[ 0 ].addEventListener('click', function() {
+    alert( this.parentNode.getElementsByTagName( 'img' )[ 0 ].textContent );
+
+
+//Need a for loop to go through all images and create modals
+for (let i=0; i<img.length; i++) {
+  img[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+
+        //Hide Scroll To Top Button
+    document.getElementById("scrollTopBtn").style.display = "none";
+  }
+
+}
+// To close using button or clicking outside of modal:
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {closeModal()};
+// When the user clicks on <span> (x), close the modal
+// Get the <span> element that closes the modal
+let closeModalButton = document.getElementsByClassName("close")[0];
+closeModalButton.onclick = function(event) {closeModal()}; 
+function closeModal() {
+  if (event.target == modal || event.target == closeModalButton) {
+    modal.style.display = "none";
+  } 
+}
+
+
+
+
+}, false);

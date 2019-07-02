@@ -337,9 +337,9 @@ i { padding-right: 10px; font-size: 1.5rem; }
   pointer-events: none;
 }*/
 /* Makes the image beneath figcaption overlay clickable */
-/*.gallery-item figure figcaption {
+.gallery-item figure figcaption {
   pointer-events: none;
-}*/
+}
 
 .gallery-item figure figcaption,
 .gallery-item figure figcaption > a {
@@ -447,17 +447,18 @@ figure.effect-milo:hover p {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /*overflow: auto;  Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
 }
 
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* Caption of Modal Image */

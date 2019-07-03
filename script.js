@@ -122,7 +122,15 @@ for (let i=0; i<imgParent.length; i++) {
     captionText.innerHTML = this.childNodes[1].alt;
     //Hide Scroll To Top Button
     scrollToTop.style.display = "none";
-  // }
+
+    /***********************************************/
+    /*****  Stop body scrolling in background  *****/
+    /***********************************************/
+    /**const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    /**const body = document.body;
+    /**body.style.position = 'fixed';
+    /**body.style.top = `-${scrollY}`;
+    **/
   });
 }
 // To close using button or clicking outside of modal:
@@ -130,6 +138,16 @@ let closeModalButton = document.getElementsByClassName("close")[0];
 function closeModal() {
   if (event.target == modal || event.target == closeModalButton) {
     modal.style.display = "none";
+
+  /***********************************************/
+  /*****  Stop body scrolling in background  *****/
+  /***********************************************/
+  /**const body = document.body;
+  /**const scrollY = body.style.top;
+  /**body.style.position = '';
+  /**body.style.top = '';
+  /**window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  **/
   } 
 }
 // When the user clicks anywhere outside of the modal, close it
@@ -137,5 +155,10 @@ window.addEventListener('click', closeModal);
 // When the user clicks on <span> (x), close the modal
 closeModalButton.addEventListener('click', closeModal);
 
-
-
+/***********************************************/
+/*****  Stop body scrolling in background  *****/
+/***********************************************/
+/**window.addEventListener('scroll', () => {
+/** document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+/**});
+**/

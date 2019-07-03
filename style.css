@@ -416,11 +416,13 @@ figure.effect-milo:hover p {
 /************************************/
 /***     CONTACT SECTION CODE     ***/
 /************************************/
-.contact {   
+article .contact {   
   display:flex;
   width: 100%;
   align-self: center; 
+  flex-direction: column;
 }
+.contact ul { width: 100%; }
 .contact i { color: #51a689; }
 .contact h3 { line-height: 2em;}
 

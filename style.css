@@ -154,10 +154,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
 #gallery-filter {
   display: flex;
   justify-content: center;
-
-flex-direction: row;
-  /*flex-basis: 100%;*/
-  flex: 1;
+  flex-wrap: wrap;
 }
 .gallery-item {
   padding: 8px;
@@ -456,25 +453,26 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
   .slanted-3 { border-left: 98.5vw solid #784970; }
   .slanted-4 { border-right: 98.5vw solid #51a689; }
 
-  #gallery-filter {
-    flex-direction: column;
-    width: 50%;
-    text-align: center;
-  }
+  #gallery-filter { 
+    flex-flow: row wrap; 
+    justify-content: space-around; 
+    margin: 10px;}
   .filter-btn:nth-child(n) { border-radius: .5em; }
-  .filter-btn { margin: 0 0 5px 0; }
+  .filter-btn { 
+    flex-basis: 40%; 
+    text-align: center; 
+    margin: 0 5px 5px 0; 
+  }
+  .filter-btn, .about-btn { padding: 10px 16px;}
   .gallery-item { flex-basis : 50%; }
   /* 100% Image Width on Smaller Screens */
   .modal-content { width: 100%; }
   footer { font-size: 1em; }
-
-  .filter-btn, .about-btn { padding: 10px 16px;}
 }
 
 @media only screen and (max-width: 600px)
 {
   body { font-size: 1.1em; }
-  /*FIX ALL FONTS!!!*/
   .title { font-size: 3rem; }
   header { font-size: 1em; padding-top: 5px; }
   .padLeft { padding-left: 0; }
@@ -484,7 +482,13 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
     justify-content: flex-start;
     align-items: flex-start;
   }
+  #gallery-filter { justify-content: center; }
   .gallery-item { flex-basis : 100%; }
   .skills article:nth-child(1) { text-align: left; }
   .contact { text-align: left; padding: 0; margin: 0; align-self: flex-start;}
+
+  .filter-btn.active {
+    font-weight: 900;
+    background-color: rgba(120, 73, 112, 0.5); /*#784970  */ 
+  }
 }

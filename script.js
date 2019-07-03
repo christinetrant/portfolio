@@ -1,28 +1,18 @@
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+let scrollToTop = document.getElementById('scrollTopBtn');
 
-function scrollFunction() {
+window.addEventListener('scroll', function() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("scrollTopBtn").style.display = "block";
+    scrollToTop.style.display = "block";
   } else {
-    document.getElementById("scrollTopBtn").style.display = "none";
+    scrollToTop.style.display = "none";
   }
-}
-
+});
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+scrollToTop.addEventListener('click', function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  //behaviour: 'smooth';
-  //document.querySelector('html, body').animate({scrollTop:0}, 'slow');
-}
-
-
-
-
-
-
-
+});
 
 /********************************/
 /***     PORTFOLIO FILTER     ***/
@@ -81,7 +71,6 @@ function removeFilter(item, name) {
   item.className = arr1.join(" ");
 }
 
-
 // Add active class to the current button (highlight it)
 let btnContainer = document.getElementById("gallery-filter");
 let btns = btnContainer.getElementsByClassName("filter-btn");
@@ -108,3 +97,45 @@ document.getElementById('filter-cars').addEventListener('click', function() {
 document.getElementById('filter-people').addEventListener('click', function() {
   filterSelection("people");
 }, false);
+
+/**************************/
+/***     MODAL CODE     ***/
+/**************************/
+// Get the modal
+let modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+// let img = document.getElementsByClassName("galleryImg");
+// Need to get parent of img as the figcaption overlay gets in way so we will select that for modal click
+let imgParent = document.getElementsByClassName("effect-milo");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+
+//Need a for loop to go through all images and create modals
+for (let i=0; i<imgParent.length; i++) {
+  imgParent[i].addEventListener('click', function() {
+  // imgParent[i].onclick = function(){
+    // console.log('hello :)', this, this.childNodes)
+    modal.style.display = "block";
+    // Call the second child <figcaption> as we are looping through parent
+    /* modalImg.src = this.src; */
+    modalImg.src = this.childNodes[1].src;
+    captionText.innerHTML = this.childNodes[1].alt;
+    //Hide Scroll To Top Button
+    scrollToTop.style.display = "none";
+  // }
+  });
+}
+// To close using button or clicking outside of modal:
+let closeModalButton = document.getElementsByClassName("close")[0];
+function closeModal() {
+  if (event.target == modal || event.target == closeModalButton) {
+    modal.style.display = "none";
+  } 
+}
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', closeModal);
+// When the user clicks on <span> (x), close the modal
+closeModalButton.addEventListener('click', closeModal);
+
+
+

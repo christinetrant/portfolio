@@ -28,7 +28,7 @@
 <!-------------------------->
 <!--- SCROLL TO TOP BUTTON --->
 <!-------------------------->
-<button onclick="topFunction()" id="scrollTopBtn">
+<button id="scrollTopBtn">
   <i class="fa fa-chevron-circle-up fa-3x"></i>
   <span class="scrollTooltip">Scroll to Top</span>
 </button>
@@ -73,7 +73,7 @@
 <section class="skills">
   <article>
     <ul>
-      <li><h3>Development</h3></li>
+      <li><h2>Development</h2></li>
       <li>HTML / HTML5</li>
       <li>CSS / CSS3</li>
       <li>Javascript</li>
@@ -83,12 +83,12 @@
   </article>
   <article>
     <ul>
-      <li><h3>Design</h3></li>
+      <li><h2>Design</h2></li>
       <li>Illustrator</li>
       <li>Dreamweaver / Sublime Text</li>
       <li>Photoshop</li>
       <li>Fireworks / InDesign</li>
-      <li>Git</li>
+      <li>Git / Command Line</li>
     </ul>
   </article>
   
@@ -118,58 +118,66 @@
 
 <main class="flex-grid">
     <div class="gallery-item people">
-      <figure class="effect-milo">
-            <img src="portfolio-combined/img/1.jpg" alt="img01"/>
-            <figcaption>
-              <h2>Faithful <span>Milo</span></h2>
-              <p>Milo went to the woods. He took a fun ride and never came back.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
+      <figure  id="div1" class="effect-milo">
+        <img class="galleryImg" id="img-0" src="img/1.jpg" alt="img01"/>
+        <figcaption class="myBtnn">
+          <h2>Faithful <span>Milo</span></h2>
+          <p>Milo went to the woods. He took a fun ride and never came back.</p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
     </div>
 
     <div class="gallery-item people">
       <figure class="effect-milo">
-            <img src="portfolio-combined/img/2.jpg" alt="img02"/>
-            <figcaption>
-              <h2>Faithful <span>Milo</span></h2>
-              <p>Milo went to the woods. He took a fun ride and never came back.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
+        <img class="galleryImg" id="img-1" src="img/2.jpg" alt="img02"/>
+        <figcaption class="myBtnn">
+          <h2>Faithful <span>Milo</span></h2>
+          <p>Milo went to the woods. He took a fun ride and never came back.</p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
     </div>
 
     <div class="gallery-item nature">
       <figure class="effect-milo">
-            <img src="portfolio-combined/img/3.jpg" alt="img03"/>
-            <figcaption>
-              <h2>Faithful <span>Milo</span></h2>
-              <p>Milo went to the woods. He took a fun ride and never came back.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
+        <img class="galleryImg" id="img-2" src="img/3.jpg" alt="img03"/>
+        <figcaption class="myBtnn">
+          <h2>Faithful <span>Milo</span></h2>
+          <p>Milo went to the woods. He took a fun ride and never came back.</p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+
+    <div class="gallery-item cars">
+
+      <figure class="effect-milo">
+        <img class="galleryImg" id="img-3" src="img/4.jpg" alt="img04"/>
+        <figcaption class="myBtnn">
+          <h2>Faithful <span>Milo</span></h2>
+          <p>Milo went to the woods. He took a fun ride and never came back.</p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
     </div>
 
     <div class="gallery-item cars">
       <figure class="effect-milo">
-            <img src="portfolio-combined/img/4.jpg" alt="img04"/>
-            <figcaption>
-              <h2>Faithful <span>Milo</span></h2>
-              <p>Milo went to the woods. He took a fun ride and never came back.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
+        <img class="galleryImg" id="img-4" src="img/5.jpg" alt="img05"/>
+        <figcaption class="myBtnn">
+          <h2>Faithful <span>Milo</span></h2>
+          <p>Milo went to the woods. He took a fun ride and never came back.</p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
     </div>
-
-    <div class="gallery-item cars">
-      <figure class="effect-milo">
-            <img src="portfolio-combined/img/5.jpg" alt="img05"/>
-            <figcaption>
-              <h2>Faithful <span>Milo</span></h2>
-              <p>Milo went to the woods. He took a fun ride and never came back.</p>
-              <a href="#">View more</a>
-            </figcaption>     
-          </figure>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
 </main>
@@ -182,30 +190,23 @@
 </header>
 <div class="slanted slanted-4"></div>
 
-<section> 
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
-</section>
+  <section> 
+    <article class="contact">
+      <ul>
+        <li><h3><a href=""><i class="fas fa-envelope"></i>christinetrant@gmail.com</a></h3></li>
+        <li><h3><a href=""><i class="fab fa-linkedin-in"></i>Linked In</a></h3></li>
+        <li><h3><a href=""><i class="fab fa-github"></i>Github</a></h3></li>
+      </ul>
+    </article>
+  </section>
 
-
-<form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
-        <input placeholder="Name" type="text" name="name" required>
-        <input placeholder="Enter email" type="email" name="email" required>
-        <textarea placeholder="Your Message" type="text" name="message"></textarea>
-        <div id="success">
-          <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
-        </div>
-        <input class="button" type="submit" id="submit" value=SUBMIT>
-      </form>
 
 <!-------------->
 <!--- FOOTER --->
 <!-------------->
 <footer>
-  <p>All images &copy; Christine Trant 2019 | <a href="http://ie.linkedin.com/in/christinetrant">LinkedIn</a> | </p>
+  <!-- Display current year using JS -->
+  <p>All images &copy; Copyright Christine Trant 2010-<script>document.write(new Date().getFullYear())</script> | <a href="http://ie.linkedin.com/in/christinetrant">LinkedIn</a> | </p>
 </footer>
 <script src="script.js"></script>
 <script src="https://kit.fontawesome.com/f2f6c2061d.js"></script>

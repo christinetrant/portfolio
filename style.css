@@ -160,10 +160,12 @@ i { padding-right: 10px; font-size: 1.5rem; }
   text-decoration: none;
   overflow: hidden;
 }
-.filter-btn { background-color: rgba(120, 73, 112, 0.7); /*#784970  */ }
+.filter-btn { background-color: rgba(120, 73, 112, 0.9); /*#784970  */ }
 .about-btn, .four0four-btn { 
-  background-color: rgba(60, 128, 163, 0.7); /*#3c80a3  */ 
-  align-self: center; margin: 10px 0 15px 0; 
+  background-color: rgba(60, 128, 163, 0.9); /*#3c80a3  */ 
+  align-self: center; 
+  /*text-align: center;*/
+  margin: 10px 0 15px 0; 
   border-radius: .5em;
 }
 .btn span {
@@ -240,8 +242,8 @@ i { padding-right: 10px; font-size: 1.5rem; }
 /* Applies the hover effect to all but 'active' class*/
 .filter-btn:hover:not(.active) span,
 .filter-btn:focus span,
-.about-btn:hover span,
-.about-btn:focus span {
+.btn:hover span,
+.btn:focus span {
   -webkit-transform: translateY(-200%);
   -moz-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -249,9 +251,18 @@ i { padding-right: 10px; font-size: 1.5rem; }
 .filter-btn.active {
   font-weight: 700;
   text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  background-color: rgba(120, 73, 112, 0.8); /*#784970  */ 
+  background-color: rgba(120, 73, 112, 0.6); /*#784970  */ 
   /*color: #f1f1f1;*/
 }
+
+
+.message {
+  flex-direction: column;
+    display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 /*************************************/
 /***     PORTFOLIO FILTER CODE     ***/
 /*************************************/
@@ -599,8 +610,5 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
   .skills article:nth-child(1) { text-align: left; }
   /*.contact { text-align: left; padding: 0; margin: 0; align-self: flex-start;}*/
 
-  .filter-btn.active {
-    font-weight: 900;
-    background-color: rgba(120, 73, 112, 0.5); /*#784970  */ 
-  }
+  
 }

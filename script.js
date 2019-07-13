@@ -88,14 +88,14 @@ for (let i = 0; i < btns.length; i++) {
 document.getElementById('filter-all').addEventListener('click', function() {
   filterSelection("all");
 }, false);
-document.getElementById('filter-nature').addEventListener('click', function() {
-  filterSelection("nature");
+document.getElementById('filter-website').addEventListener('click', function() {
+  filterSelection("website");
 }, false);
-document.getElementById('filter-cars').addEventListener('click', function() {
-  filterSelection("cars");
+document.getElementById('filter-dev').addEventListener('click', function() {
+  filterSelection("dev");
 }, false);
-document.getElementById('filter-people').addEventListener('click', function() {
-  filterSelection("people");
+document.getElementById('filter-design').addEventListener('click', function() {
+  filterSelection("design");
 }, false);
 
 /**************************/

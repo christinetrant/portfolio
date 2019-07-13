@@ -121,6 +121,15 @@ for (let i=0; i<imgParent.length; i++) {
     modalImg.src = this.childNodes[1].src;
     captionText.innerHTML = this.childNodes[1].alt;
     console.log('hello :)', this.childNodes[3], this.childNodes[3].querySelector('a').href);
+// onclick="javascript:location.href='http://www.uol.com.br/'"
+
+// <a href="#" id="myHref">Click me</a>
+// $("#myHref").on('click', function(event) {
+//     event.preventDefault();
+//     document.getElementById(".myDiv").style.flexGrow = "5";
+//     window.location = "http://www.google.com";
+// });
+
     //Hide Scroll To Top Button
     scrollToTop.style.display = "none";
 

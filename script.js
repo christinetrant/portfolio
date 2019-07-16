@@ -119,17 +119,28 @@ for (let i=0; i<imgParent.length; i++) {
     // Call the second child <figcaption> as we are looping through parent
     /* modalImg.src = this.src; */
     modalImg.src = this.childNodes[1].src;
-    captionText.innerHTML = this.childNodes[1].alt;
-    console.log('hello :)', this.childNodes[3], this.childNodes[3].querySelector('a').href);
-// onclick="javascript:location.href='http://www.uol.com.br/'"
+    // modalImg.src = this.childNodes[1].src= "img/img-" + [i+1] + '.gif';
 
-// <a href="#" id="myHref">Click me</a>
-// $("#myHref").on('click', function(event) {
-//     event.preventDefault();
-//     document.getElementById(".myDiv").style.flexGrow = "5";
-//     window.location = "http://www.google.com";
-// });
+    // captionText.innerHTML = this.childNodes[1].alt;
+    // captionText.innerHTML = this.childNodes[3].querySelector('a').href;    
 
+// console.log(this.childNodes[3].querySelector('a').href);
+// console.log(this.childNodes[3].querySelector('a').text);
+// console.log(this.childNodes[3].querySelector('p').textContent);
+// console.log(this.childNodes[3].querySelector('p').querySelector('a'));
+// console.log(this.childNodes[3].querySelector('p').children);
+
+    
+    // let modalLink = this.childNodes[3].querySelector('a');
+    let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
+    let modalText = this.childNodes[3].querySelector('p');
+    // show the caption text and create a link to view webpages - 
+    if (modalLink !== null) {
+    //WILL NEED TO ADD FOR LOOP FOR WHEN LINKS AREN'T NEEDED!
+      captionText.innerHTML = '<a href=' + modalLink.href + '>' + modalLink.text + '</a>';
+    } else {
+      captionText.innerHTML = modalText.textContent;
+    }
     //Hide Scroll To Top Button
     scrollToTop.style.display = "none";
 
@@ -154,8 +165,3 @@ function closeModal() {
 window.addEventListener('click', closeModal);
 // When the user clicks on <span> (x), close the modal
 closeModalButton.addEventListener('click', closeModal);
-
-
-// if (event.target === modal) {
-//   document.write("<p>Link: " + txt.link("https://www.w3schools.com") + "</p>");
-// }

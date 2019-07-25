@@ -4,21 +4,34 @@
 	<title>Javascript + DOM</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
+
+
+<!--
+<div id="edit" contenteditable="true">
+Here is the element's original content
+</div>
+-->
+
+<div>
 <h1 class="reveal-text">Shopping List</h1>
-<p id="first">Get it done today</p>
-<input id="userinput" type="text" placeholder="Enter text here">
-<button id="enter">Enter</button>
+<p>Get it done today</p>
+<input id="userinput" autocomplete="off" type="text" placeholder="Enter text here">
+<button id="enter" class="btn">Add to list</button>
 
 <ul class="shoppingList">
-	<li random="23">Notebook</li>
-	<li>Jelly</li>
-	<li>Spinach</li>
-	<li>Rice</li>
-	<li>Birthday Cake</li>
-	<li>Candles</li>
+	<li random="23"><span>Notebook</span></li>
+	<li><span>Jelly</span></li>
+	<li><span>Spinach</span></li>
+	<li><span>Rice</span></li>
+	<li><span>Birthday Cake</span></li>
+	<li><span>Candles</span></li>
 </ul>
+</div>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

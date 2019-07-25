@@ -19,12 +19,25 @@ BONUS:
   (HINT: You will need to use CSS to position the second dice, so look at the CSS for the first one)
   */
 
-screen.orientation.onchange = function () {
- var type = screen.orientation.type;
- if (type.match(/portrait/)) {
-   alert('Please flip to landscape, to use this app!');
- }
+// screen.orientation.onchange = function () {
+//  var type = screen.orientation.type;
+//  if (type.match(/portrait/)) {
+//    alert('Please flip to landscape, to use this app!');
+//  }
+// }
+var orientation = screen.msOrientation || screen.mozOrientation || (screen.orientation || {}).type;
+
+if (orientation === "landscape-primary") {
+  console.log("That looks good.");
+} else if (orientation === "landscape-secondary") {
+  console.log("Mmmh... the screen is upside down!");
+} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+  console.log("Mmmh... you should rotate your device to landscape");
+  alert('Please flip to landscape, to use this app!');
+} else if (orientation === undefined) {
+  console.log("The orientation API isn't supported in this browser :("); 
 }
+
 
 var scores, roundScore, activePlayer, gamePlaying, lastRoll, winScore;
 
@@ -51,6 +64,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
       //This is displayed in players current score box
       document.querySelector('#current-' + activePlayer).textContent = roundScore;
     } else {
+      alert("You rolled a 1!");
       //NEXT PLAYER
       nextPlayer();
     }
@@ -61,7 +75,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
       lastRoll=0;
       //Delete scores
       scores[activePlayer] = 0;
-      console.log("Two Sixes rolled in a row!");
+      alert("Two Sixes rolled in a row!");
       //NEXT PLAYER
       nextPlayer();
     } else {

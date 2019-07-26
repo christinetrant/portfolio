@@ -1,0 +1,10 @@
+﻿/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+		font-family:"Mossy";
+		src:url("Mossy.eot?") format("eot"),
+		url("Mossy.woff") format("woff"),
+		url("Mossy.ttf") format("truetype"),
+		url("Mossy.svg#Mossy") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}

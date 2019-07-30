@@ -135,12 +135,12 @@ for (let i=0; i<imgParent.length; i++) {
     let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
     let modalText = this.childNodes[3].querySelector('p');
     // show the caption text and create a link to view webpages - 
-    if (modalLink !== null) {
+    // if (modalLink !== null) {
     //WILL NEED TO ADD FOR LOOP FOR WHEN LINKS AREN'T NEEDED!
-      captionText.innerHTML = '<a href=' + modalLink.href + '>' + modalLink.text + '</a>';
-    } else {
+    //   captionText.innerHTML = '<a href=' + modalLink.href + '>' + modalLink.text + '</a>';
+    // } else {
       captionText.innerHTML = modalText.textContent;
-    }
+    // }
     //Hide Scroll To Top Button
     scrollToTop.style.display = "none";
 

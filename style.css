@@ -132,6 +132,16 @@ i { padding-right: 10px; font-size: 1.5rem; }
 .fa-user { color: #3c80a3; }
 .fa-envelope { color: #51a689; }
 .fa-pencil-alt { color: #784970; }
+.fa-arrow-left {
+  margin: 0 auto;
+  font-size: 4rem;
+  /* Gradient Effects */
+  background: -webkit-linear-gradient(left, #6a246a 50%, #3c80a3);
+  background: -o-linear-gradient(left, #6a246a 50%, #3c80a3);
+  background: linear-gradient(to right, #6a246a 50%, #3c80a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .emoji { font-family: 'emojisymbolsregular', cursive; background-color: #51a689; }
 .padLeft { padding-left: 35px; }
 .skills {
@@ -542,6 +552,23 @@ figure.effect-milo:hover p {
   cursor: pointer;
 }
 
+
+/***************************/
+/***     IFRAME CODE     ***/
+/***************************/
+iframe {
+  margin: 0 11%;
+  border: none;
+  width: 78%;
+  height: 95vh;
+
+  box-shadow: 5px 5px 10px #888888;
+}
+
+/*.animated i {
+  color: blue;
+  font-size: 20px;
+}*/
 /************************************/
 /***     CONTACT SECTION CODE     ***/
 /************************************/

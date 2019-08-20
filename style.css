@@ -382,7 +382,6 @@ i { padding-right: 10px; font-size: 1.5rem; }
   text-align: center;
   cursor: pointer;
 }
-figure.effect-milo a img { margin-bottom: -2%; }
 .gallery-item figure figcaption {
   padding: 2em;
   color: #f1f1f1;
@@ -435,7 +434,8 @@ figure.effect-milo a img { margin-bottom: -2%; }
 figure.effect-milo {
   background: #784970;
 }
-figure.effect-milo img {
+figure.effect-milo a img { margin-bottom: -2%; }
+figure.effect-milo img, figure.effect-milo a {
   max-width: none;
   width: 100%;
 /*  width: -webkit-calc(100% + 60px);

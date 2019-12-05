@@ -64,7 +64,7 @@ function sideHide() {
  */
 function treat() {
   var x = 0;
-  console.log("Hello - scrolled " + (x += 1) + " times");
+  // console.log("Hello - scrolled " + (x += 1) + " times");
   let currentScrollPosition = window.scrollY;
   //Make a for loop?  Make a function!
   if (currentScrollPosition >= treat1 && currentScrollPosition <= treat2) {

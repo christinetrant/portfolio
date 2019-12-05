@@ -109,51 +109,60 @@ let modal = document.getElementById("myModal");
 let imgParent = document.getElementsByClassName("effect-milo");
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption");
+  
+  console.log(document.getElementsByTagName("img"));
+  console.log(imgParent);
+  console.log(modalImg);
+  //need classname === "des" for modal to show:
 
-//Need a for loop to go through all images and create modals
-for (let i=0; i<imgParent.length; i++) {
-  imgParent[i].addEventListener('click', function() {
-  // imgParent[i].onclick = function(){
-    // console.log('hello :)', this, this.childNodes)
-    modal.style.display = "block";
-    // Call the second child <figcaption> as we are looping through parent
-    /* modalImg.src = this.src; */
-    modalImg.src = this.childNodes[1].src;
-    // modalImg.src = this.childNodes[1].src= "img/img-" + [i+1] + '.gif';
+//element.classList.contains(class);
 
-    // captionText.innerHTML = this.childNodes[1].alt;
-    // captionText.innerHTML = this.childNodes[3].querySelector('a').href;    
 
-// console.log(this.childNodes[3].querySelector('a').href);
-// console.log(this.childNodes[3].querySelector('a').text);
-// console.log(this.childNodes[3].querySelector('p').textContent);
-// console.log(this.childNodes[3].querySelector('p').querySelector('a'));
-// console.log(this.childNodes[3].querySelector('p').children);
 
-    
-    // let modalLink = this.childNodes[3].querySelector('a');
-    let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
-    let modalText = this.childNodes[3].querySelector('p');
-    // show the caption text and create a link to view webpages - 
-    // if (modalLink !== null) {
-    //WILL NEED TO ADD FOR LOOP FOR WHEN LINKS AREN'T NEEDED!
-    //   captionText.innerHTML = '<a href=' + modalLink.href + '>' + modalLink.text + '</a>';
-    // } else {
-      captionText.innerHTML = modalText.textContent;
-    // }
-    //Hide Scroll To Top Button
-    scrollToTop.style.display = "none";
+  //Need a for loop to go through all images and create modals
+  for (let i=0; i<imgParent.length; i++) {
+    imgParent[i].addEventListener('click', function() {
 
-    /***********************************************/
-    /*****  Stop body scrolling in background  *****/
-    /***********************************************/
-    /**const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    /**const body = document.body;
-    /**body.style.position = 'fixed';
-    /**body.style.top = `-${scrollY}`;
-    **/
-  });
-}
+      if(modalImg.classList.contains("des")) {
+
+
+
+              // imgParent[i].onclick = function(){
+                // console.log('hello :)', this, this.childNodes)
+                modal.style.display = "block";
+                // Call the second child <figcaption> as we are looping through parent
+                /* modalImg.src = this.src; */
+                modalImg.src = this.childNodes[1].src;
+                
+                // let modalLink = this.childNodes[3].querySelector('a');
+                let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
+                let modalText = this.childNodes[3].querySelector('p');
+                // show the caption text and create a link to view webpages - 
+                // if (modalLink !== null) {
+                //WILL NEED TO ADD FOR LOOP FOR WHEN LINKS AREN'T NEEDED!
+                //   captionText.innerHTML = '<a href=' + modalLink.href + '>' + modalLink.text + '</a>';
+                // } else {
+                  captionText.innerHTML = modalText.textContent;
+                // }
+                //Hide Scroll To Top Button
+                scrollToTop.style.display = "none";
+
+                /***********************************************/
+                /*****  Stop body scrolling in background  *****/
+                /***********************************************/
+                /**const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+                /**const body = document.body;
+                /**body.style.position = 'fixed';
+                /**body.style.top = `-${scrollY}`;
+                **/
+
+
+
+      }
+
+    });
+  }
+
 // To close using button or clicking outside of modal:
 let closeModalButton = document.getElementsByClassName("close")[0];
 function closeModal() {

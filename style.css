@@ -31,6 +31,15 @@ ul {
 }
 li { padding: 10px 0 0 20px; }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-item {
+  max-width: 50%;
+}
+
 /********************************/
 /*     SCROLL TO TOP BUTTON     */
 /********************************/

@@ -6,12 +6,17 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://christinetrant.com/</loc>
-  <lastmod>2016-05-06T10:15:21+00:00</lastmod>
+  <loc>https://www.christinetrant.com/</loc>
+  <lastmod>2019-12-05T18:46:27+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://christinetrant.com/files/Christine_Trant_CV_2016.pdf</loc>
-  <lastmod>2016-05-06T10:15:21+00:00</lastmod>
+  <loc>https://www.christinetrant.com/files/Christine_Trant_CV_2019.pdf</loc>
+  <lastmod>2019-09-11T13:47:11+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+
+
 </urlset>

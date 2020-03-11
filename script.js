@@ -110,9 +110,9 @@ let imgParent = document.getElementsByClassName("effect-milo");
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption");
   
-console.log(document.getElementsByTagName("img"));
-console.log(imgParent);
-console.log(modalImg);
+// console.log(document.getElementsByTagName("img"));
+// console.log(imgParent);
+// console.log(modalImg);
 
 //Need a for loop to go through all images and create modals
 for (let i=0; i<imgParent.length; i++) {
@@ -120,8 +120,8 @@ for (let i=0; i<imgParent.length; i++) {
     // if the image class has 'des' then we want to show the modal
     if(this.childNodes[1].classList.contains('des')) {
       modal.style.display = "block";
-    }
-    // Call the second child <figcaption> as we are looping through parent
+
+      // Call the second child <figcaption> as we are looping through parent
     modalImg.src = this.childNodes[1].src;
     let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
     let modalText = this.childNodes[3].querySelector('p');
@@ -129,6 +129,8 @@ for (let i=0; i<imgParent.length; i++) {
     captionText.innerHTML = modalText.textContent;
     //Hide Scroll To Top Button
     scrollToTop.style.display = "none";
+    }
+    
   });
 }
 

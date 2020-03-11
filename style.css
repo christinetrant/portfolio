@@ -16,7 +16,7 @@ a, a:hover, a:active, a:focus {
 section { display: flex; }
 /* Style the content */
 article {
-  -webkit-flex: 1; /* was originally 2? */
+  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   margin: 20px 50px;
@@ -300,7 +300,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
   width: 33.33%;
   display: none; /* Hide all elements by default */
 }
-.gallery-item img { width: 100%; }
+.gallery-item img { width: 100%; border-radius: .5em; }
 /* The "show" class is added to the filtered elements */
 .filter-show { display: block; }
 /* PORTFOLIO FILTER BUTTON STYlING */
@@ -440,8 +440,9 @@ i { padding-right: 10px; font-size: 1.5rem; }
 /*****   Milo hover effect    *****/
 /***** Code from tympanus.net *****/
 /*--------------------------------*/
-figure.effect-milo {
+figure.effect-milo:hover {
   background: #784970;
+  border-radius: .5em;
 }
 figure.effect-milo a img { margin-bottom: -2%; }
 figure.effect-milo img, figure.effect-milo a {
@@ -601,6 +602,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding-top: 5px;
   font-size: 1rem;
   text-align: center;
@@ -659,3 +661,10 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
 
   
 }
+
+
+
+/*404 styling*/
+.message article { margin-top: 0; text-align: center;}
+.message img { width: 40%; margin-top: 10px; }
+figcaption { font-size: 1rem; }

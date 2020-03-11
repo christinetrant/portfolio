@@ -141,6 +141,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
 .fa-user { color: #3c80a3; }
 .fa-envelope { color: #51a689; }
 .fa-pencil-alt { color: #784970; }
+.green i { color: #51a689; }
 .fa-arrow-left {
   margin: 0 auto;
   font-size: 4rem;

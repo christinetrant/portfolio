@@ -118,13 +118,13 @@ let captionText = document.getElementById("caption");
 for (let i=0; i<imgParent.length; i++) {
   imgParent[i].addEventListener('click', function() {
     // if the image class has 'des' then we want to show the modal
-    if(this.childNodes[1].classList.contains('des')) {
+    if(this.childNodes[3].classList.contains('des')) {
       modal.style.display = "block";
 
       // Call the second child <figcaption> as we are looping through parent
-    modalImg.src = this.childNodes[1].src;
-    let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
-    let modalText = this.childNodes[3].querySelector('p');
+    modalImg.src = this.childNodes[3].src;
+    let modalLink = this.childNodes[5].querySelector('p').querySelector('a');
+    let modalText = this.childNodes[5].querySelector('p');
     // show the caption text and create a link to view webpages - 
     captionText.innerHTML = modalText.textContent;
     //Hide Scroll To Top Button

@@ -658,12 +658,13 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
   #gallery-filter { justify-content: center; }
   .gallery-item { flex-basis : 100%; }
   .skills article:nth-child(1) { text-align: left; }
-  /*.contact { text-align: left; padding: 0; margin: 0; align-self: flex-start;}*/
-
-  
+  .skills { 
+    justify-content: center;
+    align-items: center; 
+  }  
+  .skills article { margin: 20px 0; }
+  footer { font-size: 0.8rem; }
 }
-
-
 
 /*404 styling*/
 .message article { margin-top: 0; text-align: center;}

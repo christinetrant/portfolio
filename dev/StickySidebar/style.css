@@ -1,0 +1,132 @@
+/*  Make responsive - flexbox - media queries */
+
+body {
+  background: #8E4162;
+  color: #c8aab6;
+  margin: 0 25%;
+}
+
+p {
+  line-height: 1.8em;
+  text-align: justify;
+  font-family: 'Gentium Basic', serif;
+}
+
+#sidenav {
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 25%;
+  
+  /* next 3 properties for sidebar visibility */
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  padding: 8px;
+  background: #F6BE84;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+  transition: background-color 300ms ease-in;
+  color: #41393E;
+  border-radius: 15px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#item,
+#price {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main {
+  margin-left: 216px; /* Same width as the sidebar + left position in px */
+  font-size: 1.25em; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  #sidenav {
+    padding-top: 15px;
+  }
+}
+
+.main h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+#sidenav p {
+  font-family: 'Gentium Basic', serif;
+  font-weight: 800;
+  text-align: center;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+/* HEADER TEXT - Taken from https://codepen.io/redouglas/pen/alsqt */
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+h1 .large {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+h2.pinline {
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  font-size: 1em;
+  margin: 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2.pinline span {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+h2.pinline span::before,
+h2.pinline span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: #c8aab6;
+  width: 99999px;
+}
+
+h2.pinline span::before {
+  left: 100%;
+  margin-left: 20px;
+}
+
+h2.pinline span::after {
+  right: 100%;
+  margin-right: 20px;
+}

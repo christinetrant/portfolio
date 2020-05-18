@@ -5,7 +5,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.5em;
   background-color: #f1f1f1;
 }
 a, a:hover, a:active, a:focus {    
@@ -13,12 +13,13 @@ a, a:hover, a:active, a:focus {
   color: inherit; 
 }
 /* Container for flexboxes */
-section { display: flex; }
+section { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Style the content */
 article {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   margin: 20px 50px;
   justify-content: center;
   align-items: center;
@@ -31,14 +32,6 @@ ul {
 }
 li { padding: 10px 0 0 20px; }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.flex-center-item {
-  max-width: 50%;
-}
 
 /********************************/
 /*     SCROLL TO TOP BUTTON     */
@@ -286,6 +279,8 @@ i { padding-right: 10px; font-size: 1.5rem; }
 /*************************************/
 /***     PORTFOLIO FILTER CODE     ***/
 /*************************************/
+#gallery { margin: 0 5%; }
+
 .skills a, #gallery-filter a { color: #f1f1f1; }
 .flex-grid {
   display:flex;
@@ -305,77 +300,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
 /* The "show" class is added to the filtered elements */
 .filter-show { display: block; }
 /* PORTFOLIO FILTER BUTTON STYlING */
-/*.about-btn {
-  border-radius: .5em;
-}
-.filter-btn, .about-btn {
-  margin: 0;
-  padding: 12px 16px;
-  height: 2em;
-  font-family: inherit;
-  font-size: 1em;
-  letter-spacing: 1px;
-  font-weight: 400;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: rgba(120, 73, 112, 0.7); /*#784970  */ 
- /* text-decoration: none;
-  overflow: hidden;
-}
-.filter-btn:nth-child(1) { border-radius: .5em 0 0 .5em; }
-.filter-btn:nth-child(4) { border-radius: 0 .5em .5em 0; }
-.filter-btn:hover, .filter-btn:focus { outline: none; }
-.filter-btn span, .about-btn span {
-  position: relative;
-  display: inline-block;
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
-}
-.about-btn span::before {*/
-  /*center icon as position is absolute*/
-  /*left: calc((100% - 1em)/2);*/
-/*}*/
-/*.filter-btn span::before, .about-btn span::before {
-  position: absolute;
-  top: 100%;
-  font-weight: 700;
-  text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  -webkit-transform: translate3d(0,100%,0);
-  -moz-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0);
-}
-.filter-btn span::before { content: attr(data-hover); }
-.icon::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-.cv:before { 
-  font: 1em FontAwesome; 
-  font-weight: 900; 
-  text-align: center;
-  content: "\f15c"; 
-}*/
-/*.about-btn span::before { content: attr(data-hover); }*/
-/* Applies the hover effect to all but 'active' class*/
-/*.filter-btn:hover:not(.active) span,
-.filter-btn:focus span,
-.about-btn:hover span,
-.about-btn:focus span {
-  -webkit-transform: translateY(-200%);
-  -moz-transform: translateY(-200%);
-  transform: translateY(-200%);
-}
-.filter-btn.active {
-  font-weight: 700;
-  text-shadow: 0 0 1px rgba(255,255,255,0.3);
-  background-color: rgba(120, 73, 112, 0.8); *//*#784970  */ 
-  /*color: #f1f1f1;*/
-/*}*/
+
 /*If Javascript is disabled - message styling*/
 #gallery__filters__message {   
   color: #f1f1f1; 
@@ -617,7 +542,7 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
 /******************************/
 @media only screen and (max-width: 1000px)
 {
-  body { font-size: 1.2em; }
+  body { font-size: 1.4em; }
   .title { font-size: 5rem; }
   header { font-size: 1.1em; padding-top: 10px; }
   .slanted-1 { border-left: 98.5vw solid #ce4c6e; }
@@ -647,6 +572,9 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
 {
   body { font-size: 1.1em; }
   .title { font-size: 3rem; }
+  i { font-size: 1.2rem; }
+  .contact h3 { font-size: 1.1em; }
+  .contact li { padding: 0; }
   header { font-size: 1em; padding-top: 5px; }
   .padLeft { padding-left: 0; }
   section, footer {
@@ -658,11 +586,8 @@ footer a:hover, footer a:active, footer a:focus {  text-shadow: 1px 1px 1px rgba
   #gallery-filter { justify-content: center; }
   .gallery-item { flex-basis : 100%; }
   .skills article:nth-child(1) { text-align: left; }
-  .skills { 
-    justify-content: center;
-    align-items: center; 
-  }  
-  .skills article { margin: 20px 0; }
+  .skills { justify-content: center; align-items: center; }  
+  .skills article { margin: 20px 0; align-self: center; }
   footer { font-size: 0.8rem; }
 }
 

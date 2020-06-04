@@ -173,14 +173,15 @@ i { padding-right: 10px; font-size: 1.5rem; }
   text-decoration: none;
   overflow: hidden;
 }
-.filter-btn { background-color: rgba(120, 73, 112, 0.9); /*#784970  */ }
-.about-btn, .four0four-btn { 
-  background-color: rgba(60, 128, 163, 0.9); /*#3c80a3  */ 
+.filter-btn, .code-btn { background-color: rgba(120, 73, 112, 0.9); /*#784970  */ }
+.about-btn, .four0four-btn { background-color: rgba(60, 128, 163, 0.9); /*#3c80a3  */ }
+.about-btn, .four0four-btn, .code-btn {  
   align-self: center; 
   /*text-align: center;*/
   margin: 10px 0 15px 0; 
   border-radius: .5em;
 }
+.code-buttons a { color: #f1f1f1; margin: 0 5px;}
 .btn span {
   position: relative;
   display: inline-block;
@@ -208,7 +209,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
   left: calc((100% - 1em)/2);
 }
 
-.filter-btn span::before, .four0four-btn span::before { content: attr(data-hover); }
+.filter-btn span::before, .four0four-btn span::before, .code-btn span::before { content: attr(data-hover); }
 .icon::before {
   display: inline-block;
   font-style: normal;

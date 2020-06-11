@@ -129,13 +129,61 @@
   <a id="filter-all" class="btn filter-btn active"><span data-hover="Show all">Show all</span></a>
   <a id="filter-website" class="btn filter-btn"><span data-hover="Websites">Websites</span></a>
   <a id="filter-dev" class="btn filter-btn"><span data-hover="Development">Development</span></a>
-  <a id="filter-design" class="btn filter-btn"><span data-hover="Designs">Designs</span></a>
+  <!-- <a id="filter-design" class="btn filter-btn"><span data-hover="Designs">Designs</span></a> -->
 
   <!--  Error message in case javascript is disabled -->
   <p id="gallery__filters__message">Sorry, these filters won&rsquo;t work without JavaScript enabled. You can still see all my work below!</p>
 </div>
 
 <main id="gallery" class="flex-grid">
+    <!-- Card Matching Game -->
+    <div class="gallery-item dev">
+      <figure class="effect-milo">
+        <a href="https://christinetrant.github.io/z2mChallenge14-MemoryGame/" target="_blank">
+          <img srcset="img/gallery/memory-mobile.png 337w,
+                      img/gallery/memory-desktop.png 426w"
+              sizes="(max-width: 600px) 337px, 426px"
+              src="img/gallery/memory-desktop.png"
+              alt="Concentration" 
+              class="devLink">
+        </a>
+        <figcaption>
+          <h2>Concentration</h2>
+          <p>A version of concentration - a card matching game</p>
+          <br>
+          <p>Javascript, CSS, HTML</p>
+        </figcaption>     
+      </figure>
+      <section class="code-buttons">
+        <a href="https://github.com/christinetrant/z2mChallenge14-MemoryGame" class="btn code-btn"><span data-hover="Code">Code</span></a>
+        <a href="https://christinetrant.github.io/z2mChallenge14-MemoryGame/" class="btn code-btn"><span data-hover="Demo">Demo</span></a>
+      </section>
+    </div>
+
+    <!-- RoboFriends -->
+    <div class="gallery-item dev">
+      <figure class="effect-milo">
+        <a href="https://christinetrant.github.io/robofriends/" target="_blank">
+          <img srcset="img/gallery/robofriends-mobile.png 337w,
+                      img/gallery/robofriends-desktop.png 426w"
+              sizes="(max-width: 600px) 337px, 426px"
+              src="img/gallery/robofriends-desktop.png"
+              alt="React: RoboFriends"
+              class="devLink">
+        </a>
+        <figcaption>
+          <h2>Robo<span>Friends</span></h2>
+          <p>A React App to search through robots by name and update cards.</p>
+          <br>
+          <p>React</p>
+        </figcaption>     
+      </figure>
+      <section class="code-buttons">
+        <a href="https://github.com/christinetrant/robofriends" class="btn code-btn"><span data-hover="Code">Code</span></a>
+        <a href="https://christinetrant.github.io/robofriends/" class="btn code-btn"><span data-hover="Demo">Demo</span></a>
+      </section>
+    </div>
+
     <!-- Female Boxing Coach -->
     <div class="gallery-item website">
       <figure class="effect-milo">
@@ -181,30 +229,6 @@
         <a href="https://github.com/christinetrant/Coding_Challenge-6" class="btn code-btn"><span data-hover="Code">Code</span></a>
         <a href="https://christinetrant.github.io/Coding_Challenge-6/" class="btn code-btn"><span data-hover="Demo">Demo</span></a>
         <a href="https://www.npmjs.com/package/colorconverter-z2m" class="btn code-btn"><span data-hover="npm">npm</span></a>
-      </section>
-    </div>
-
-    <!-- Card Matching Game -->
-    <div class="gallery-item dev">
-      <figure class="effect-milo">
-        <a href="https://christinetrant.github.io/z2mChallenge14-MemoryGame/" target="_blank">
-          <img srcset="img/gallery/memory-mobile.png 337w,
-                      img/gallery/memory-desktop.png 426w"
-              sizes="(max-width: 600px) 337px, 426px"
-              src="img/gallery/memory-desktop.png"
-              alt="Concentration" 
-              class="devLink">
-        </a>
-        <figcaption>
-          <h2>Concentration</h2>
-          <p>A version of concentration - a card matching game</p>
-          <br>
-          <p>Javascript, CSS, HTML</p>
-        </figcaption>     
-      </figure>
-      <section class="code-buttons">
-        <a href="https://github.com/christinetrant/z2mChallenge14-MemoryGame" class="btn code-btn"><span data-hover="Code">Code</span></a>
-        <a href="https://christinetrant.github.io/z2mChallenge14-MemoryGame/" class="btn code-btn"><span data-hover="Demo">Demo</span></a>
       </section>
     </div>
     
@@ -302,7 +326,7 @@
     </div>
 
     <!-- Javascript Shopping List -->
-    <div class="gallery-item dev">
+    <!-- <div class="gallery-item dev">
       <figure class="effect-milo">
         <a href="https://christinetrant.github.io/ToDoList/" target="_blank">
           <img srcset="img/gallery/list-mobile.png 337w,
@@ -322,10 +346,10 @@
         <a href="https://github.com/christinetrant/ToDoList" class="btn code-btn"><span data-hover="Code">Code</span></a>
         <a href="https://christinetrant.github.io/ToDoList/" class="btn code-btn"><span data-hover="Demo">Demo</span></a>
       </section>
-    </div>
+    </div> -->
     
     <!-- Vector Characters -->
-    <div class="gallery-item design">
+    <!-- <div class="gallery-item design">
       <figure class="effect-milo">
         <img srcset="img/gallery/8-mobile.jpg 337w,
                       img/gallery/8-desktop.jpg 426w"
@@ -339,10 +363,10 @@
           <p>Movie Villains (The Riddler, Dr. Frank-N-Furter & Mugatu) created using Illustrator.</p>
         </figcaption>     
       </figure>
-    </div>
+    </div> -->
     
     <!-- Female Genital Mutilation -->
-    <div class="gallery-item design">
+    <!-- <div class="gallery-item design">
       <figure class="effect-milo">
         <img srcset="img/gallery/10-mobile.jpg 337w,
                       img/gallery/10-desktop.jpg 426w"
@@ -356,14 +380,14 @@
           <p>A series of posters to highlight the issue of female genital mutilation.  Designed using Photoshop & Illustrator.</p>
         </figcaption>     
       </figure>
-    </div>
+    </div> -->
     
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
       <div id="caption"></div>
-    </div>
+    </div> -->
 </main>
 
 <!------------------>

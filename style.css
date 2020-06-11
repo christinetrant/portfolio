@@ -201,7 +201,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
 /* PORTFOLIO FILTER BUTTON STYlING */
 
 .filter-btn:nth-child(1) { border-radius: .5em 0 0 .5em; }
-.filter-btn:nth-child(4) { border-radius: 0 .5em .5em 0; }
+.filter-btn:nth-child(3) { border-radius: 0 .5em .5em 0; }
 .filter-btn:hover, .filter-btn:focus { outline: none; }
 
 .about-btn span::before {

@@ -94,49 +94,49 @@ document.getElementById('filter-website').addEventListener('click', function() {
 document.getElementById('filter-dev').addEventListener('click', function() {
   filterSelection("dev");
 }, false);
-document.getElementById('filter-design').addEventListener('click', function() {
-  filterSelection("design");
-}, false);
+// document.getElementById('filter-design').addEventListener('click', function() {
+  // filterSelection("design");
+// }, false);
 
 /**************************/
 /***     MODAL CODE     ***/
 /**************************/
 // Get the modal
-let modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-// let img = document.getElementsByClassName("galleryImg");
-// Need to get parent of img as the figcaption overlay gets in way so we will select that for modal click
-let imgParent = document.getElementsByClassName("effect-milo");
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
+// let modal = document.getElementById("myModal");
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// // let img = document.getElementsByClassName("galleryImg");
+// // Need to get parent of img as the figcaption overlay gets in way so we will select that for modal click
+// let imgParent = document.getElementsByClassName("effect-milo");
+// let modalImg = document.getElementById("img01");
+// let captionText = document.getElementById("caption");
   
-//Need a for loop to go through all images and create modals
-for (let i=0; i<imgParent.length; i++) {
-  imgParent[i].addEventListener('click', function() {
-    // if the image class has 'des' then we want to show the modal
-    if(this.childNodes[1].classList.contains('des')) {
-      modal.style.display = "block";
+// //Need a for loop to go through all images and create modals
+// for (let i=0; i<imgParent.length; i++) {
+//   imgParent[i].addEventListener('click', function() {
+//     // if the image class has 'des' then we want to show the modal
+//     if(this.childNodes[1].classList.contains('des')) {
+//       modal.style.display = "block";
 
-      // Call the second child <figcaption> as we are looping through parent
-      modalImg.src = this.childNodes[1].src;
-      let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
-      let modalText = this.childNodes[3].querySelector('p');
-      // show the caption text and create a link to view webpages - 
-      captionText.innerHTML = modalText.textContent;
-      //Hide Scroll To Top Button
-      scrollToTop.style.display = "none";
-    } 
-  });
-}
+//       // Call the second child <figcaption> as we are looping through parent
+//       modalImg.src = this.childNodes[1].src;
+//       let modalLink = this.childNodes[3].querySelector('p').querySelector('a');
+//       let modalText = this.childNodes[3].querySelector('p');
+//       // show the caption text and create a link to view webpages - 
+//       captionText.innerHTML = modalText.textContent;
+//       //Hide Scroll To Top Button
+//       scrollToTop.style.display = "none";
+//     } 
+//   });
+// }
 
 // To close using button or clicking outside of modal:
-let closeModalButton = document.getElementsByClassName("close")[0];
-function closeModal() {
-  if (event.target == modal || event.target == closeModalButton) {
-    modal.style.display = "none";
-  } 
-}
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', closeModal);
-// When the user clicks on <span> (x), close the modal
-closeModalButton.addEventListener('click', closeModal);
+// let closeModalButton = document.getElementsByClassName("close")[0];
+// function closeModal() {
+//   if (event.target == modal || event.target == closeModalButton) {
+//     modal.style.display = "none";
+//   } 
+// }
+// // When the user clicks anywhere outside of the modal, close it
+// window.addEventListener('click', closeModal);
+// // When the user clicks on <span> (x), close the modal
+// closeModalButton.addEventListener('click', closeModal);

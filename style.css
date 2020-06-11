@@ -267,7 +267,7 @@ i { padding-right: 10px; font-size: 1.5rem; }
   width: 33.33%;
   display: none; /* Hide all elements by default */
 }
-.gallery-item img { width: 100%; border-radius: .5em; }
+.gallery-item img { width: 100%; height: 100%; border-radius: .5em; border: 1px solid #784970;}
 /* The "show" class is added to the filtered elements */
 .filter-show { display: block; }
 /* PORTFOLIO FILTER BUTTON STYlING */
